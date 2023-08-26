@@ -47,10 +47,11 @@
 
 .task-title {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: red;
     width: 90%;
 }
 
 .task-delete {
     width: 10%;
+    display: flex;
+    justify-content: center;
 }
