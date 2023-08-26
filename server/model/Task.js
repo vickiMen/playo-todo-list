@@ -1,18 +1,15 @@
 class Task {
-    
+
     static id = 0;
+    
     static incrementId() {
-        this.id++; 
+        this.id++;
     }
 
-    constructor(title, initialId) {
+    constructor(title) {
         Task.incrementId();
-        this.id = initialId || Task.id;
         this.title = title;
-    };
-
-    getId() {
-        return this.id;
+        this.id = Task.id;
     };
 
 }

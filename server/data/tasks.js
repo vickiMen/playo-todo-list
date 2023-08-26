@@ -1,12 +1,17 @@
-const tasks = [
-    {
-        title: 'yoga',
-        id: 1,
-    },
-    {
-        title: 'clean the house',
-        id: 2,
-    },
+const Task = require('../model/Task');
+
+const tasks = [];
+
+const dummyData = [
+    "yoga",
+    "gym",
 ];
 
-module.exports = tasks;
+const initTasks = () => {
+    dummyData.forEach(title => {
+        tasks.push(new Task(title))
+    });
+    return tasks;
+}
+
+module.exports = { initTasks, tasks };
